@@ -13,7 +13,7 @@ float SinIntegral(float a, float b, float e){
     return res;
 }
 
-void sort(int* nums, int begin, int end)
+void QuickSort(int* nums, int begin, int end)
 {
     int l = begin, r = end;
     int v = nums[l+(r-l)/2];
@@ -30,7 +30,11 @@ void sort(int* nums, int begin, int end)
         }
     }
     if(begin < r)
-        sort(nums, begin, r);
+        QuickSort(nums, begin, r);
     if(l < end)
-        sort(nums, l, end);
+        QuickSort(nums, l, end);
+}
+
+void Sort(int* arr, const size_t n) {
+    QuickSort(arr, 0, n);
 }

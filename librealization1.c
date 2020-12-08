@@ -11,12 +11,12 @@ float SinIntegral(float a, float b, float e){
     return res;
 }
 
-void bubbleSort(int *a, size_t size) {
+void Sort(int *a, size_t size) {
     size_t i, j;
     int tmp;
     for (i = 1; i < size; i++) {
         for (j = 1; j < size; j++) {
-            if (a[j] > a[j-1]) {
+            if (a[j] < a[j-1]) {
                 tmp = a[j];
                 a[j] = a[j-1];
                 a[j-1] = tmp;
