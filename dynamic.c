@@ -22,12 +22,11 @@ int main(){
                 perror("invalid input");
                 exit(1);
             }
-            SinIntegral = dlsym(dlHandle, "Sort");
+            SinIntegral = dlsym(dlHandle, "SinIntegral");
             if (SinIntegral == NULL){
                 perror(dlerror());
             }
-            printf("Sine integral %f\n", SinIntegral(a, b, e));
-
+            printf("Sin integral %f\n", SinIntegral(a, b, e));
         } else if (func == 2) {
             size_t size;
             if (scanf("%lu", &size) != 1) {
@@ -50,9 +49,19 @@ int main(){
             for (size_t i = 0; i < size - 1; ++i){
                 printf("%d, ", arr[i]);
             }
-            printf("%d", arr[size - 1]);
+            printf("%d.1", arr[size - 1]);
             printf("\n");
             free(arr);
+        } else if (func == 3){
+            if (dlclose(dlHandle) != 0){
+                perror(dlerror());
+                exit(1);
+            }
+            lib = (lib + 1) % 2;
+            dlHandle = dlopen(libNames[lib], RTLD_NOW);
+            if (dlHandle == NULL){
+                perror(dlerror());
+            }
         }
     }
 

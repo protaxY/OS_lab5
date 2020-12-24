@@ -13,7 +13,7 @@ int main(){
                 perror("invalid input");
                 exit(1);
             }
-            printf("Sine integral %f\n", SinIntegral(a, b, e));
+            printf("Sin integral %f\n", SinIntegral(a, b, e));
 
         } else if (func == 2) {
             size_t size;
@@ -33,7 +33,7 @@ int main(){
             for (size_t i = 0; i < size - 1; ++i){
                 printf("%d, ", arr[i]);
             }
-            printf("%d", arr[size - 1]);
+            printf("%dю", arr[size - 1]);
             printf("\n");
             free(arr);
         }
