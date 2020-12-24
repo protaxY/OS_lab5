@@ -2,6 +2,7 @@
 #include <math.h>
 
 float SinIntegral(float a, float b, float e){
+    printf("realization 1\n");
     float res = 0;
     float pos = a;
     while (pos <= b){
@@ -12,6 +13,7 @@ float SinIntegral(float a, float b, float e){
 }
 
 void Sort(int *a, size_t size) {
+    printf("realization 1\n");
     size_t i, j;
     int tmp;
     for (i = 1; i < size; i++) {

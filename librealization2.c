@@ -2,6 +2,7 @@
 #include <math.h>
 
 float SinIntegral(float a, float b, float e){
+    printf("realization 2\n");
     float res = 0;
     float pos1 = a;
     float pos2 = a + e;
@@ -15,6 +16,7 @@ float SinIntegral(float a, float b, float e){
 
 void QuickSort(int* nums, int begin, int end)
 {
+    printf("realization 2\n");
     int l = begin, r = end;
     int v = nums[l+(r-l)/2];
     while(l <= r)

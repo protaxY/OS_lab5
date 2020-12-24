@@ -15,9 +15,11 @@ int main(){
     }
 
     int func;
+    printf("enter function number:");
     while (scanf("%d", &func) > 0) {
         if (func == 1) {
             float a, b, e;
+            printf("enter SinIntegral limits:");
             if (scanf("%f %f %f", &a, &b, &e) != 3) {
                 perror("invalid input");
                 exit(1);
@@ -29,6 +31,7 @@ int main(){
             printf("Sin integral %f\n", SinIntegral(a, b, e));
         } else if (func == 2) {
             size_t size;
+            printf("enter Sort params:");
             if (scanf("%lu", &size) != 1) {
                 perror("invalid input");
                 exit(1);
@@ -62,7 +65,9 @@ int main(){
             if (dlHandle == NULL){
                 perror(dlerror());
             }
+            printf("library changed\n");
         }
+        printf("enter function number:");
     }
 
     if (dlclose(dlHandle) != 0){
